@@ -13,16 +13,18 @@ public class Main {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction et  = em.getTransaction();
 		
-		Student std = new Student(123,"Rohit",10);
+		Studentt std = new Studentt(117,"pranav",20);
 		
 		try {
 			
 			et.begin();
 			em.persist(std);
 			et.commit();
+			System.out.println("Record inserted successfully");
 			
 		} catch (Exception e) {
 			et.rollback();
+			System.out.println("Record not inserted");
 			
 		}
 	}
