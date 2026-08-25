@@ -49,7 +49,7 @@ public class Employee {
 	@Override
 	
 	public String toString() {
-		return "Employee Id ="+id+"Name"+name+"salary"+salary+"dept"+dept;
+		return "Employee Id = " +id+" Name: "+name+" salary :"+salary+" dept : "+dept; 
 		
 	}	
 }
