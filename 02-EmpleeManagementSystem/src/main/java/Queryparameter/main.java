@@ -10,7 +10,7 @@ import jakarta.persistence.Query;
 public class main {
 
 	public static void main(String[] args) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("surve");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pranav");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction et = em.getTransaction();
 		
