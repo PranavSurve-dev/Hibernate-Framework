@@ -13,19 +13,29 @@ public class Main {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction et  = em.getTransaction();
 		
-		Studentt std = new Studentt(117,"pranav",20);
+//		Studentt std = new Studentt(117,"pranav",20);
+//		
+//		try {
+//			
+//			et.begin();
+//			em.persist(std);
+//			et.commit();
+//			System.out.println("Record inserted successfully");
+//			
+//		} catch (Exception e) {
+//			et.rollback();
+//			System.out.println("Record not inserted");
+//			
+//		}
 		
-		try {
-			
-			et.begin();
-			em.persist(std);
-			et.commit();
-			System.out.println("Record inserted successfully");
-			
-		} catch (Exception e) {
-			et.rollback();
-			System.out.println("Record not inserted");
-			
-		}
+//		product p1 = new product("Laptop", 50000);
+
+		Studentt s = new Studentt(103,"pranav",24);
+		System.out.println(s);
+		et.begin();
+
+		em.persist(s);
+
+		et.commit();
 	}
 }

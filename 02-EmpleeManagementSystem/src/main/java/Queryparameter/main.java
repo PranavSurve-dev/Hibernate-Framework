@@ -20,7 +20,7 @@ public class main {
 		query.setParameter(1, 101);
 		query.setParameter(2, "Pranav");
 		
-		Employee emp  =(Employee)query.getSingleResult();
+		Employee emp  = (Employee)query.getSingleResult();
 		System.out.println(emp);
 		
 //String jpql = ("select e from Employee e where e.id = :empId and e.name = :empName");

@@ -1,14 +1,19 @@
 package demo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "students")
 public class Studentt {
     @Id
 	private int id;
+    @Column(length = 10)
 	private String name;
-	private int age;
+    @Column(name = "age",unique = true, nullable = false )
+	private int stuAge;
 	
 	public Studentt() {
 		
@@ -17,7 +22,7 @@ public class Studentt {
 	public Studentt(int id, String name, int age) {
 		this.id = id;
 		this.name = name;
-		this.age = age;
+		this.stuAge = age;
 	}
 	public int getId() {
 		return id;
@@ -31,11 +36,14 @@ public class Studentt {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
-		return age;
+
+	public int getStuAge() {
+		return stuAge;
 	}
-	public void setAge(int age) {
-		this.age = age;
+
+	public void setStuAge(int stuAge) {
+		this.stuAge = stuAge;
 	}
+	
 	
 }
