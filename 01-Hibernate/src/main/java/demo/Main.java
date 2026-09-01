@@ -30,11 +30,15 @@ public class Main {
 		
 //		product p1 = new product("Laptop", 50000);
 
-		Studentt s = new Studentt(103,"pranav",24);
-		System.out.println(s);
+//		Studentt s = new Studentt(103,"pranav",24);
+//		System.out.println(s);
+		
+		marker m1 = new marker("Red", 80);
+		marker marker = em.find(marker.class, 1);
+		
 		et.begin();
 
-		em.persist(s);
+			m1.setColour("Blue");
 
 		et.commit();
 	}
