@@ -52,6 +52,4 @@ public class Car {
 	public String toString() {
 		return "Car [id=" + id + ", brands=" + brands + ", price=" + price + ", engine=" + engine + "]";
 	}
-	
-	
 }

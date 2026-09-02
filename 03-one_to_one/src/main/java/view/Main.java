@@ -19,12 +19,12 @@ public class Main {
 	  Engine e1 = new Engine("petrol",1200); 
 	  Car c1 = new Car("BMW",10000,e1);
 	  
-	  et.begin();
-	  em.persist(e1);
-	  em.persist(c1);
-	  et.commit();
+//	  et.begin();
+//	  em.persist(e1);
+//	  em.persist(c1);
+//	  et.commit();
 	  
 	  
-		
+	  	
 	}
 }
