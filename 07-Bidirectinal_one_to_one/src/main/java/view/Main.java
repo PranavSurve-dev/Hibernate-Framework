@@ -16,15 +16,22 @@ public class Main {
 	  EntityTransaction et = em.getTransaction();
 	  
 	  Car car = new Car();
-	  car.setBrands("Audi");
-	  car.setPrice(10000);
+//	  car.setBrands("Audi");
+//	  car.setPrice(10000);
 	  
 	  Engine engine = new Engine();
-	  engine.setType("Diesel");
-	  engine.setHp(1500);
+//	  engine.setType("Diesel");
+//	  engine.setHp(1500);
+//	  
+//	  car.setEngine(engine);
+//	  engine.setCar(car);
 	  
-	  car.setEngine(engine);
-	  engine.setCar(car);
+	  Car car1 = em.find(Car.class, 1);
+	  System.out.println(car1);
+	  
+	  Engine engine1 = em.find(Engine.class, 1) ;
+	  System.out.println(engine1);
+	     
 	  
 	  et.begin();
 	  em.persist(engine);

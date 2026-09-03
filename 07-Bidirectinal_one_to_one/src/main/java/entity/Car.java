@@ -1,6 +1,7 @@
 package entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,7 +15,7 @@ public class Car {
 	private int id;
 	private String brands;
 	private double price;
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "engine_id")
 	private Engine engine;
 	public Car () {
