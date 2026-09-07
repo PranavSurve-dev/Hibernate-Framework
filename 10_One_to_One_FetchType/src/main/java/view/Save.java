@@ -16,10 +16,15 @@ public class Save {
 		
 
 		// Only car will be fetched
-		Car car = em.find(Car.class, 1);
+		Car car = em.find(Car.class, 101);
 		
 		//Now the engine will be fetched
 		Engine e = car.getEngine();
+		car.setBrand("porsche");
+		car.setPrice(1000000);
+		
+		e.setType("V8");
+		e.setHp(500);
 		
 		System.out.println(car);
 		System.out.println(e);
